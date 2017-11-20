@@ -39,7 +39,7 @@ public class AuthTokenTest {
                 .addHeader("Content-Type", "application/json")
                 .post(RequestBody.create(MediaType.parse("application/json"),
                         String.format("{\"sign\":\"%s\",\"timestamp\":\"%s\",\"appkey\":\"%s\"}",
-                                sign, AppConstant.APP_KEY, String.valueOf(timestamp))))
+                                sign, String.valueOf(timestamp), AppConstant.APP_KEY)))
                 .build();
 
         // 执行请求，并输出响应
@@ -48,6 +48,7 @@ public class AuthTokenTest {
         log.info("code = {} ,message = {}" ,response.code() ,response.message());
         assertTrue(response.isSuccessful()) ;
 
+        // {"result":"ok","expire_time":"1511236638021","auth_token":"1f4282ccc76dd4e23c0e1a895ee568d75ea912e886ade5bd24ac664e58d4d365"}
         log.info("/------------\n{}\n------------------------------------------------------------/" ,
                 response.body().string());
 
