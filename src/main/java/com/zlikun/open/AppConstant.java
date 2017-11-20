@@ -12,4 +12,8 @@ public interface AppConstant {
     String MASTER_SECRET = "xZFlgaxqfh6Tp8hBJxdSN5" ;
     String CLIENT_ID = "cb9573d8251a8acc984626c19c8dbe5a" ;
 
+    /** 仅供测试，会变更 */
+    String AUTH_TOKEN = "5ef903176a1367c3d76815d2d0be0c655ec5bbc1295727df7aa101f4851ac493" ;
+    String ACCESS_TOKEN = "" ;
+
 }
