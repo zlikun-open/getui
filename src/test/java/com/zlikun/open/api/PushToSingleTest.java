@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
  * @date 2017-11-20 15:53
  */
 @Slf4j
-public class SinglePushTest {
+public class PushToSingleTest {
 
     final OkHttpClient client = new OkHttpClient.Builder().build() ;
 
