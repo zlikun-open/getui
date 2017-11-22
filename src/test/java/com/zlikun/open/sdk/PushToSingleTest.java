@@ -20,13 +20,20 @@ import org.junit.Test;
 @Slf4j
 public class PushToSingleTest {
 
-    private String host = "http://sdk.open.api.igexin.com/apiex.htm" ;
-
     private IGtPush push ;
 
     @Before
     public void init() {
-        push = new IGtPush(host, AppConstant.APP_KEY, AppConstant.MASTER_SECRET);
+        /**
+         * 该类用于执行对个推推送的请求
+         * http://docs.getui.com/server/java/interface/
+         * host (string/no) 推送os域名, host可选填，如果host不填程序自动检测用户网络，选择最快的域名连接下发
+         * appKey (string/yes) 用于鉴定身份是否合法
+         * masterSecret (string/yes) 第三方客户端个推集成鉴权码，用于验证第三方合法性。在服务端推送鉴权时使用
+         * useSSL (boolean/no) 是否使用https接口调用：true 使用https连接，false使用http连接；默认使用http
+         */
+//        push = new IGtPush(AppConstant.APP_KEY, AppConstant.MASTER_SECRET);
+        push = new IGtPush(AppConstant.APP_KEY, AppConstant.MASTER_SECRET ,true);
     }
 
     @Test
