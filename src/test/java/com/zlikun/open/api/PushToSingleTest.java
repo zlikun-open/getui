@@ -6,7 +6,6 @@ import okhttp3.*;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.UUID;
 
 import static org.junit.Assert.assertTrue;
 
