@@ -22,3 +22,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+### Other ###
+src/test/java/com/zlikun/open/demo/PushToAppTest.java
